@@ -1,0 +1,22 @@
+<html>
+  <body>
+    <p id="demo">
+      Here we may paste some log messages:<br />
+    </p>
+    
+    <script language="javascript">
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://www.googleapis.com/oauth2/v3/token", true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send();
+        xhr.onload = function() 
+        {
+          //data = JSON.parse(this.responseText);
+          alert(this.responseText);
+        };
+      
+    </script>  
+    
+  </body>
+</html>
